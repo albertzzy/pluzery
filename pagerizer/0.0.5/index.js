@@ -140,4 +140,5 @@ Pagerizer.prototype.bindEvent = function(){
 }
 
 
+
 module.exports = Pagerizer;
