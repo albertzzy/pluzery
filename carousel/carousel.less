@@ -1,0 +1,49 @@
+.epay-slider{
+	position: absolute;
+	left:0;
+	top:0;
+	height:100%;
+	list-style: none;
+	/*width:75rem;*/
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	font-size: 0;
+}
+
+.epay-card{
+	width:18.75rem;
+	/*width:100%;*/
+	display: inline-block;
+	height:100%;
+	position: absolute;
+}
+
+.epay-slider-dot{
+	list-style: none;
+	font-size: 0;
+	position: absolute;
+	bottom:10px;
+	left:50%;
+	padding:0;
+	transform:translate3d(-50%,0,0);
+}
+.epay-dot{
+	display: inline-block;
+	width:0.4rem;
+	height:0.4rem;
+	margin-right:0.2rem;
+	border-radius: 0.4rem;
+	border:1PX solid #444;
+}
+.epay-dot.active{
+	background-color:#fff;
+}
+
+.epay-slider-link{
+	display:block;
+	width:100%;
+	height:100%;
+	text-decoration: none;
+}
