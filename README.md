@@ -3,6 +3,8 @@
 ## desc
 
 a list of zepto and jquery plugins
+    1.pagizer
+    2.carousel
 
 ## status
 
