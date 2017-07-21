@@ -102,6 +102,10 @@ Pagerizer.prototype.bindEvent = function(){
 			var index = + $(this).data('index');
 			self.activeIndex = index;
 
+			if(self.activeIndex>=self.totalPageNum || self.activeIndex<=1){
+				return;
+			}
+
 			self.initialize();
 			self.activateFunc(index);
 		});
@@ -110,7 +114,7 @@ Pagerizer.prototype.bindEvent = function(){
 	if(self.prev && self.prev !== ''){
 		$('.j-pagination-next').on('click',function(){
 			self.activeIndex ++;
-			if(self.activeIndex>=self.totalPageNum){
+			if(self.activeIndex>self.totalPageNum){
 				return;
 			}
 			if(self.async){
@@ -125,7 +129,7 @@ Pagerizer.prototype.bindEvent = function(){
 	if(self.next && self.next !== ''){
 		$('.j-pagination-prev').on('click',function(){
 			self.activeIndex --;
-			if(self.activeIndex<=1){
+			if(self.activeIndex<1){
 				return;
 			}
 			if(self.async){
@@ -138,7 +142,5 @@ Pagerizer.prototype.bindEvent = function(){
 	}
 
 }
-
-
 
 module.exports = Pagerizer;
